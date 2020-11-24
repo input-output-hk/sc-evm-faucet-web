@@ -7,7 +7,7 @@
   "private": false,
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "rimraf dist && webpack --mode development"
+    "build": "rimraf dist && webpack --mode production"
   },
   "dependencies": {
     "@open-rpc/client-js": "^1.6.0"

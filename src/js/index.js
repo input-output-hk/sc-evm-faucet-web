@@ -18,5 +18,6 @@ requestForm.onsubmit = (event) => {
     })
     .catch((err) => {
       errorMessage.style.display = 'block';
+      console.error(err)
     })
 }
