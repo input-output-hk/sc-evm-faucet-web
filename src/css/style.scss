@@ -59,6 +59,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 #content {
@@ -79,18 +80,20 @@ label {
 
 input {
   border: 2px solid black;
+  padding: 4px;
   border-radius: 0px;
   height: 34px;
   font-family: 'Montserrat';
   font-weight: 600;
   margin-bottom: 17px;
   margin-top: 2px;
-  padding-left: 4px;
-}
 
-input:focus {
-  outline: none;
-  border: 3px solid black;
+  &:focus {
+    border: 3px solid black;
+    outline: none;
+    padding: 3px;
+  }
+
 }
 
 #address-field {
@@ -104,10 +107,10 @@ input[type=button], input[type=submit], input[type=reset] {
   padding-left: 14px;
   padding-right: 14px;
   font-size: 10px;
-}
-
-input[type=button]:disabled, input[type=submit]:disabled {
-  background-color: #4e4e4e;
+  
+  &:disabled {
+    background-color: #4e4e4e;
+  }
 }
 
 #success-message {
