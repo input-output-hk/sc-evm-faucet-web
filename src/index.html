@@ -16,9 +16,13 @@
         <form id="request-form">
           <label for="addressField">Your address:</label>
           <input type="text" id="address-field" name="address-field">
-          <input type="submit" value="Request funds">
+          <input type="submit" id="form-submit" value="Request funds">
+          <div class="loader"></div>
         </form>
-        <div id="success-message">Funds have been successfully sent to your wallet!</div>
+        <div id="success-message">
+          <span>Funds have been successfully sent to your wallet!</span><br>
+          <span id="message-address">Address: 0x111111111111111111111111111111111</span>
+        </div>
         <div id="error-message">There was an error sending the funds to your wallet!</div>
       </div>
     </div>
