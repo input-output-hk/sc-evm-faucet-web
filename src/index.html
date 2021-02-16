@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Mantis Sagano Faucet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
@@ -14,23 +14,33 @@
       </div>
       <div id="content">
         <p>
-          Request will send 1 Test ETC to your designated Sagano address.<br>
+          Request will send 1 Test ETC to your designated Sagano address.<br />
           Users can make 1 claim every 24 hours.
         </p>
         <form id="request-form">
           <label for="addressField">Your Sagano address:</label>
-          <input type="text" id="address-field" name="address-field">
-          <input type="submit" id="form-submit" value="Request test ETC">
+          <input type="text" id="address-field" name="address-field" />
+          <input type="submit" id="form-submit" value="Request test ETC" />
           <div class="loader"></div>
         </form>
         <div id="success-message">
           <p>
-            <span>Funds have been successfully sent to your wallet!</span><br>
-            <span id="message-address">Destination address: 0x111111111111111111111111111111111</span><br>
-            <span id="message-txid">Transaction ID: 0x111111111111111111111111111111111</span>
+            <span>Funds have been successfully sent to your wallet!</span><br />
+            <span id="message-address"
+              >Destination address: 0x111111111111111111111111111111111</span
+            ><br />
+            <span id="message-txid"
+              >Transaction ID: 0x111111111111111111111111111111111</span
+            >
           </p>
         </div>
-        <div id="error-message">There was an error sending the funds to your wallet!</div>
+        <div id="error-message">
+          There was an error sending the funds to your wallet!
+        </div>
+        <div id="rate-limit-error-message">
+          You can request funds only once per
+          <span id="rate-limit-time">1 day</span>.
+        </div>
       </div>
     </div>
   </body>
