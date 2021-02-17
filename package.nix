@@ -3,7 +3,7 @@
 mkYarnPackage {
   src = ./.;
 
-  FAUCET_NODE_URL = "https://mantis-testnet-mantis-faucet.mantis.ws";
+  FAUCET_NODE_URL = "https://mantis-testnet-faucet.mantis.ws";
 
   doCheck = false;
   distPhase = "true";
