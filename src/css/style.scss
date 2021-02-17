@@ -1,32 +1,41 @@
 /* montserrat-regular - latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  src: url("../fonts/montserrat-v15-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/montserrat-v15-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/montserrat-v15-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/montserrat-v15-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/montserrat-v15-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/montserrat-v15-latin-regular.svg#Montserrat") format("svg"); /* Legacy iOS */
 }
 /* montserrat-600 - latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/montserrat-v15-latin-600.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/montserrat-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/montserrat-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v15-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/montserrat-v15-latin-600.svg#Montserrat') format('svg'); /* Legacy iOS */
+  src: url("../fonts/montserrat-v15-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/montserrat-v15-latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/montserrat-v15-latin-600.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/montserrat-v15-latin-600.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/montserrat-v15-latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/montserrat-v15-latin-600.svg#Montserrat") format("svg"); /* Legacy iOS */
 }
 
 html {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   margin: 0px;
   height: 100%;
@@ -40,7 +49,7 @@ body {
 p {
   font-size: 14px;
   text-align: center;
-} 
+}
 
 .wrapper {
   height: 100%;
@@ -58,7 +67,6 @@ p {
 #header-logo {
   margin-right: 10px;
 }
-
 
 #request-form {
   display: flex;
@@ -89,7 +97,7 @@ input {
   padding: 4px;
   border-radius: 0px;
   height: 34px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   margin-bottom: 17px;
   margin-top: 2px;
@@ -99,21 +107,22 @@ input {
     outline: none;
     padding: 3px;
   }
-
 }
 
 #address-field {
   width: 400px;
 }
 
-input[type=button], input[type=submit], input[type=reset] {
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   color: white;
   background-color: black;
   height: 34px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 10px;
-  
+
   &:disabled {
     background-color: #4e4e4e;
   }
@@ -124,6 +133,10 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 #error-message {
+  display: none;
+}
+
+#rate-limit-error-message {
   display: none;
 }
 
@@ -138,6 +151,10 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
