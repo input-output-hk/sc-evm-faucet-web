@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Mantis Sagano Faucet</title>
+    <title>Mantis {process.env.MANTIS_VM} Faucet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
@@ -10,15 +10,15 @@
     <div class="wrapper">
       <div id="header">
         <img src="images/logos-logo-horizontal-lockup.svg" id="header-logo" />
-        <span>Sagano Faucet</span>
+        <span>{process.env.MANTIS_VM} Faucet</span>
       </div>
       <div id="content">
         <p>
-          Request will send 1 Test ETC to your designated Sagano address.<br />
+          Request will send 1 Test ETC to your designated {process.env.MANTIS_VM} address.<br />
           Users can make 1 claim every 24 hours.
         </p>
         <form id="request-form">
-          <label for="addressField">Your Sagano address:</label>
+          <label for="addressField">Your {process.env.MANTIS_VM} address:</label>
           <input type="text" id="address-field" name="address-field" />
           <input type="submit" id="form-submit" value="Request test ETC" />
           <div class="loader"></div>
