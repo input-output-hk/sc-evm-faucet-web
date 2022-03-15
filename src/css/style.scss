@@ -1,53 +1,24 @@
-/* montserrat-regular - latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/montserrat-v15-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/montserrat-v15-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/montserrat-v15-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/montserrat-v15-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/montserrat-v15-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/montserrat-v15-latin-regular.svg#Montserrat") format("svg"); /* Legacy iOS */
-}
-/* montserrat-600 - latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/montserrat-v15-latin-600.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/montserrat-v15-latin-600.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/montserrat-v15-latin-600.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/montserrat-v15-latin-600.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/montserrat-v15-latin-600.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/montserrat-v15-latin-600.svg#Montserrat") format("svg"); /* Legacy iOS */
-}
-
 html {
-  font-family: "Montserrat";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
   margin: 0px;
   height: 100%;
 }
+
+$primaryColor: #1a1b23de;
+$accentColor: #2094f3;
+$textColor: #e9ebfc;
+$backgroundColor: #121212;
 
 body {
   margin: 0px;
   height: 100%;
+  background-color: $backgroundColor;
+  color: $textColor;
 }
 
 p {
-  font-size: 14px;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -81,7 +52,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ededed;
+  background-color: $primaryColor;
   flex: 2;
 }
 
@@ -93,17 +64,15 @@ label {
 }
 
 input {
-  border: 2px solid black;
   padding: 4px;
-  border-radius: 0px;
+  border-radius: 12px;
   height: 34px;
-  font-family: "Montserrat";
   font-weight: 600;
   margin-bottom: 17px;
   margin-top: 2px;
 
   &:focus {
-    border: 3px solid black;
+    border: 3px solid #2094f3;
     outline: none;
     padding: 3px;
   }
@@ -116,12 +85,12 @@ input {
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  color: white;
-  background-color: black;
+  color: $primaryColor;
+  background-color: #2094f3;
   height: 34px;
   padding-left: 14px;
   padding-right: 14px;
-  font-size: 10px;
+  font-size: 1em;
 
   &:disabled {
     background-color: #4e4e4e;
