@@ -4,16 +4,20 @@ html {
   margin: 0px;
   height: 100%;
 }
-
-$primaryColor: #1a1b23de;
-$accentColor: #2094f3;
-$textColor: #e9ebfc;
-$backgroundColor: #121212;
+// Style Guide
+// Cardano Blue  #0033ad
+// Cardano Pink #ff5453
+// Backgrounds black or white
+$primaryColor: #fff;
+$accentColor: #ff5453;
+$textColor: #000;
+$backgroundColor: #0033ad; 
 
 body {
   margin: 0px;
   height: 100%;
-  background-color: $backgroundColor;
+  background: rgb(255,84,83);
+  background: linear-gradient(309deg, rgba(255,84,83,1) 0%, rgba(0,51,173,1) 100%);
   color: $textColor;
 }
 
@@ -33,6 +37,7 @@ p {
   align-items: center;
   justify-content: center;
   height: 150px;
+  color: white;
 }
 
 #header-logo {
@@ -72,7 +77,7 @@ input {
   margin-top: 2px;
 
   &:focus {
-    border: 3px solid #2094f3;
+    border: 3px solid $accentColor;
     outline: none;
     padding: 3px;
   }
@@ -86,7 +91,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"] {
   color: $primaryColor;
-  background-color: #2094f3;
+  background-color: $accentColor;
   height: 34px;
   padding-left: 14px;
   padding-right: 14px;
