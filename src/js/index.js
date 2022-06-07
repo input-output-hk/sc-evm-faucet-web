@@ -38,7 +38,7 @@ requestForm.onsubmit = async (event) => {
   headers.append("Content-Type", "application/json");
 
   try {
-    const response = await fetch(process.env.FAUCET_NODE_URL, {
+    const response = await fetch(window.location.origin, {
       method: "POST",
       body: JSON.stringify(requestBody),
       mode: "cors",
