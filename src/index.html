@@ -2,25 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Mantis {process.env.MANTIS_VM} Faucet</title>
+    <title>Atago Testnet Faucet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
     <div class="wrapper">
       <div id="header">
-        <img src="images/logos-logo-horizontal-lockup.svg" id="header-logo" />
-        <span>{process.env.MANTIS_VM} Faucet</span>
+        <span>Atago Testnet Faucet</span>
       </div>
       <div id="content">
         <p>
-          Request will send 1 Test ETC to your designated {process.env.MANTIS_VM} address.<br />
+          Request will send 1 tFUEL to your designated receiving address.<br />
           Users can make 1 claim every 24 hours.
         </p>
         <form id="request-form">
-          <label for="addressField">Your {process.env.MANTIS_VM} address:</label>
+          <label for="addressField">Your receiving address:</label>
           <input type="text" id="address-field" name="address-field" />
-          <input type="submit" id="form-submit" value="Request test ETC" />
+          <input type="submit" id="form-submit" value="Request tFUEL" />
           <div class="loader"></div>
         </form>
         <div id="success-message">
