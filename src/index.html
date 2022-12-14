@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Atago Testnet Faucet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>
-      window.alert("This faucet is running on the Atago test network and allows you to claim tFUEL tokens which are valueless and not to be used for commerical purposes.");
-    </script>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div id="header">
-        <span>Atago Testnet Faucet</span>
-      </div>
-      <div id="content">
+<head>
+  <meta charset="UTF-8" />
+  <title>Atago Testnet Faucet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- JS requirements for the disclaimer checkboxes. Checkboxes must be checked to enable the form submit button. -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $("#question1, #question2, #question3, #question4").change(function () {
+        if ($("#question1").is(':checked') && $("#question2").is(':checked') && $("#question3").is(':checked') && $("#question4").is(':checked')) {
+          $('.submit-btn').attr('disabled', false);
+        } else {
+          $('.submit-btn').attr('disabled', true);
+        }
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="header">
+      <span>Atago Testnet Faucet</span>
+    </div>
+    <div id="content">
+      <p>
+        Request will send 1 tFUEL to your designated receiving address.<br />
+        Users can make 1 claim every 24 hours.
+      </p>
+      <form id="request-form">
+        <label for="addressField">Your receiving address:</label>
+        <input type="text" id="address-field" name="address-field" />
+        <label><input id="question1" name="question1" type="checkbox" value="1">I have read the <a target="_blank" href="https://static.iohk.io/terms/iohktermsandconditions.pdf">Terms & Conditions</a>.</label>
+        <label><input id="question2" name="question2" type="checkbox" value="1">I understand and agree to the collection of any of my personal data (such as wallet ID) subject to this <a href="https://static.iohk.io/terms/iog-privacy-policy.pdf" target="_blank">Privacy Policy</a>.</label>
+        <label><input id="question3" name="question3" type="checkbox" value="1">I acknowledge that FUEL tokens distributed via the faucet on this website have no economic or monetary value and cannot be exchanged for cash, cash equivalent, or value.</label>
+        <label><input id="question4" name="question4" type="checkbox" value="1">I understand that FUEL tokens are solely intended for personal use and testing purposes on the example EVM sidechain.</label>
+        <!-- Submit button -->
+        <input class="submit-btn" type="submit" id="form-submit" value="Request tFUEL" disabled="" />
+        <div class="loader"></div>
+      </form>
+      <div id="success-message">
         <p>
-          Request will send 1 tFUEL to your designated receiving address.<br />
-          Users can make 1 claim every 24 hours.
+          <span>Funds have been successfully sent to your wallet!</span><br />
+          <span id="message-address">Destination address: 0x111111111111111111111111111111111</span><br />
+          <span id="message-txid">Transaction ID: 0x111111111111111111111111111111111</span>
         </p>
-        <form id="request-form">
-          <label for="addressField">Your receiving address:</label>
-          <input type="text" id="address-field" name="address-field" />
-          <input type="submit" id="form-submit" value="Request tFUEL" />
-          <div class="loader"></div>
-        </form>
-        <div id="success-message">
-          <p>
-            <span>Funds have been successfully sent to your wallet!</span><br />
-            <span id="message-address"
-              >Destination address: 0x111111111111111111111111111111111</span
-            ><br />
-            <span id="message-txid"
-              >Transaction ID: 0x111111111111111111111111111111111</span
-            >
-          </p>
-        </div>
-        <div id="error-message">
-          There was an error sending the funds to your wallet!
-        </div>
-        <div id="rate-limit-error-message">
-          You can request funds only once per
-          <span id="rate-limit-time">1 day</span>.
-        </div>
-        <div class="disclaimer">This faucet is running on the Atago test network and allows you to claim tFUEL tokens which are valueless and not to be used for commerical purposes.
-        </div>
+      </div>
+      <div id="error-message">
+        There was an error sending the funds to your wallet!
+      </div>
+      <div id="rate-limit-error-message">
+        You can request funds only once per
+        <span id="rate-limit-time">1 day</span>.
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
