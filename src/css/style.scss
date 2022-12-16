@@ -15,32 +15,10 @@ $darker-grey: #323232;
 $dark-grey: #454545;
 $grey: #606060;
 $white: #FFFFFF;
-
-// Animated graident which can be extended to a class
-.animated-gradient {
-  background: linear-gradient(270deg, #59a2ff, #c059ff, #ff5959);
-  background-size: 600% 600%;
-
-  -webkit-animation: AnimationName 20s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@keyframes AnimationName {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
+$link: #4394fd;
+$link-hover: #2c64ad;
+$green: #a7f7a0;
+$red: #ff6c6c;
 
 body {
   margin: 0px;
@@ -55,9 +33,23 @@ p {
   color: $white;
 }
 
-.disclaimer {
-  color: $grey;
-  max-width: 300px;
+a {
+  color: $link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover;
+}
+
+.card {
+  background-color: $darker-grey;
+  max-width: 400px;
+  border-radius: 0.5em;
+}
+
+.card-content {
+  padding: 2em;
 }
 
 .wrapper {
@@ -70,7 +62,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150px;
+  height: 120px;
   color: white;
   background-color: $darker-grey;
   font-size: 1.5em;
@@ -98,7 +90,7 @@ p {
 
 label {
   align-self: flex-start;
-  margin-bottom: 3px;
+  margin-bottom: 1em;
   font-size: 10pt;
   color: grey;
 }
@@ -119,30 +111,45 @@ input {
 }
 
 #address-field {
-  width: 400px;
+  width: 320px;
+  background-color: $darkest-grey;
+  color: white;
+}
+
+.checkbox {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  color: $white;
-  @extend .animated-gradient;
+  color: $darker-grey;
   height: 34px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 1em;
+  background-color: $white;
+  cursor: pointer;
+  margin-top: 1em;
 
   &:disabled {
     background-color: $grey;
+    color: $dark-grey;
+    cursor: not-allowed;
   }
 }
 
 #success-message {
   display: none;
+  color: $green;
+  background-color: $darkest-grey;
 }
 
 #error-message {
   display: none;
+  color: $red;
+  background-color: $darkest-grey;
 }
 
 #rate-limit-error-message {
@@ -163,32 +170,8 @@ input[type="reset"] {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
-}
-
-
-.footer {
-  margin: auto;
-  ul {
-  list-style: none;
-    li {
-      padding: 0.5em;
-      display: inline;
-      a {
-        font-size: 2em;
-        color: $grey;
-      }
-      a:hover {
-        animation: color-change 2s normal;
-      }
-    }
-  }
-}
-
-@keyframes color-change {
-  0% { color: $grey; }
-  30% { color: lightgrey; }
-  100% { color: $white; }
 }
