@@ -51,7 +51,9 @@ a:hover {
 .card-content {
   padding: 2em;
 }
-
+.social-links-wrapper {
+  margin-top: 1.5em;
+}
 .wrapper {
   height: 100%;
   display: flex;
@@ -76,7 +78,7 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5em;
   margin-top: 20px;
 }
 
@@ -92,7 +94,9 @@ label {
   align-self: flex-start;
   margin-bottom: 1em;
   font-size: 10pt;
-  color: grey;
+  color: rgb(189, 189, 189);
+  margin-bottom: 16px;
+  line-height: 1.5em;
 }
 
 input {
@@ -119,6 +123,10 @@ input {
 .checkbox {
   width: 1.5em;
   height: 1.5em;
+  margin-bottom: 3px;
+  margin-right: 10px;
+  position: relative;
+  top: 0.3em;
 }
 
 input[type="button"],
@@ -150,6 +158,8 @@ input[type="reset"] {
   display: none;
   color: $red;
   background-color: $darkest-grey;
+  padding: 1em;
+  border-radius: 0.5em;
 }
 
 #rate-limit-error-message {
