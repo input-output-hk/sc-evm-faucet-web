@@ -152,6 +152,8 @@ input[type="reset"] {
   display: none;
   color: $green;
   background-color: $darkest-grey;
+  padding: 1em;
+  border-radius: 0.5em;
 }
 
 #error-message {
