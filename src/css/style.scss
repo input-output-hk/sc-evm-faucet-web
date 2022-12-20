@@ -154,6 +154,9 @@ input[type="reset"] {
   background-color: $darkest-grey;
   padding: 1em;
   border-radius: 0.5em;
+  p {
+    color: $green;
+  }
 }
 
 #error-message {
