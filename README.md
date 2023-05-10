@@ -1,6 +1,6 @@
-# Mantis Faucet Web
+# SC_EVM Faucet Web
 
-Web interface for Mantis Faucet
+Web interface for SC_EVM Faucet
 
 ## Prerequisites
 
