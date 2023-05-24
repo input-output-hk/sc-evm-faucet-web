@@ -1,7 +1,7 @@
 {
-  "name": "mantis-faucet-web",
+  "name": "sc-evm-faucet-web",
   "version": "1.0.0",
-  "repository": "git@github.com:input-output-hk/mantis-faucet-web.git",
+  "repository": "git@github.com:input-output-hk/sc-evm-faucet-web.git",
   "author": "Samuel Cibulka <samuel.cibulka@gmail.com>",
   "license": "Apache-2.0",
   "private": false,
