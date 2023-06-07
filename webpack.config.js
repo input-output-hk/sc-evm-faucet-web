@@ -71,7 +71,7 @@ module.exports = {
       chunkFilename: "[id].css",
     }),
     new webpack.EnvironmentPlugin({
-      FAUCET_NODE_URL: "https://mantis-testnet-faucet.mantis.ws/",
+      FAUCET_NODE_URL: "https://sc-evm-testnet-faucet.sc-evm.ws/",
     }),
   ],
 };
