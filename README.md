@@ -9,7 +9,7 @@ After three months of experimentation with the proof-of-concept EVM sidechain te
   
 All information included below is considered publicly available and is free to be leveraged by developers to fork it to build and experiment with their own EVM sidechain solution. Should you have any questions, please reach out to our team on our IOG Discord server.  
 ## 2. Description
-This repository contains everything you need to build and run a faucet that will dispense test tokens for the SC_EVM chain.  
+This repository contains everything you need to build and run a web interface to a faucet dispensing test tokens for the SC_EVM chain.  
 
 ## 3. Next steps
 
