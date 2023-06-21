@@ -4,13 +4,13 @@ mkYarnPackage {
   src = ./.;
 
   FAUCET_NODE_URL = "https://sc-evm-testnet-faucet.sc-evm.ws";
-  SC_EVM_VM = "VM_Name";
+  sc-evm_VM = "VM_Name";
 
   doCheck = false;
   distPhase = "true";
 
   patchPhase = ''
-    substituteInPlace src/index.html --replace "{process.env.SC_EVM_VM}" "$SC_EVM_VM"
+    substituteInPlace src/index.html --replace "{process.env.sc-evm_VM}" "$sc-evm_VM"
   '';
 
   buildPhase = ''

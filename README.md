@@ -1,29 +1,18 @@
-# SC_EVM Faucet Web
+# SC_EVM Faucet
 
-Web interface for SC_EVM Faucet
 
-## Prerequisites
+## 1. Notice
 
-- [Node.js](https://nodejs.org/en/) - tested with v12
-  - (optional) [nvm](https://github.com/nvm-sh/nvm) - you can use nvm to automatically pick-up the Node version you need
-- [yarn](https://classic.yarnpkg.com/en/) - tested with v1.22.5
+As of 2023, IOG will no longer be updating or maintaining this repo.
 
-## Initialize the project
+After three months of experimentation with the proof-of-concept EVM sidechain testnet, we have gathered valuable learnings from this experience and this innovative playground. New use cases and functionality were tested, feedback from the community was gathered, and we are now shifting our focus back to the strategic evolution of our sidechains approach.  
+  
+All information included below is considered publicly available and is free to be leveraged by developers to fork it to build and experiment with their own EVM sidechain solution. Should you have any questions, please reach out to our team on our IOG Discord server.  
+## 2. Description
+This repository contains everything you need to build and run a web interface to a faucet dispensing test tokens for the SC_EVM chain.  
 
-Running the `yarn` command in the project directory will download the dependencies. After this action, all the script below can be run.
+## 3. Next steps
 
-## Scripts
+If you decide to investigate further, start with the [development instructions](DEVELOPMENT.md) and go from there.  
 
-### `yarn build`
-
-Build code from `src` for production.
-
-### `yarn start`
-
-Start webpack development server watching for changes in `src` directory.
-
-## Configuration
-
-Webpack reads following environment variables (from `process.env`):
-
-- `FAUCET_NODE_URL`
+The repository for the SC_EVM chain is available in [this public GitHub repository](https://github.com/input-output-hk/sc-evm)  
